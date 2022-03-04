@@ -1,11 +1,23 @@
-/* body{
-    background-color: aqua;
-} */
+
+/* HEADER */
+#my-header{
+    height: 70px;
+}
+
+.my-input{
+    text-align: center;
+}
+
+
+
+/* MAIN */
+main{
+    background-color: rgb(0, 0, 117);
+}
 
 #grid{
     width: 600px;
     height: 600px;
-    border: 1px solid black;
     margin: auto;
     margin-top: 50px;
 }
@@ -19,8 +31,8 @@
 
 .box{
     border: 3 px solid purple;
-    width: calc(100% / 8);
-    height: calc(100% / 8);
+    width: calc(100% / 10);
+    height: calc(100% / 10);
     background-color: orange;
     border: 4px solid red;
     float: left;
@@ -32,4 +44,5 @@
 
 .box.clicked{
     background-color: blue;
+    border-color: white;
 }
