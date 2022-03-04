@@ -20,7 +20,25 @@ const main = document.querySelector("main");
 const grid = document.getElementById("grid");
 
 
-let difficoltàUtente = document.getElementById("difficolà");
+
+
+
+
+/* collego il bottone play con js */
+const buttonPlay = document.getElementById("my-button");
+
+
+
+/* aggiungo una funzionalità al click del bottone play */
+buttonPlay.addEventListener("click", function() {
+
+
+
+
+
+
+
+})
 
 
 
