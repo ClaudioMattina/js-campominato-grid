@@ -56,9 +56,9 @@ if(inputDifficoltà.value == "facile"){
     }
 }
 
-else if(inputDifficoltà.value === "intermedio"){
+else if(inputDifficoltà.value == "intermedio"){
         /* CICLO FOR CHE CREA LA SERIE DI QUADRATINI */
-        for(i = 0; i < 100; i++){
+        for(i = 0; i < 81; i++){
             /* creo una varialbile che crei un elemento tramite la funzione che ho creato */
             const realSquare = createSquare();
 
@@ -73,7 +73,7 @@ else if(inputDifficoltà.value === "intermedio"){
 }
 }
 
-else if(inputDifficoltà.value == "difficile"){
+else {
       /* CICLO FOR CHE CREA LA SERIE DI QUADRATINI */
       for(i = 0; i < 49; i++){
         /* creo una varialbile che crei un elemento tramite la funzione che ho creato */
