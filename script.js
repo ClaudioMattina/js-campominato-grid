@@ -106,6 +106,7 @@ buttonPlay.addEventListener("click", function() {
                 realSquare.addEventListener("click" , function(){
                 realSquare.classList.toggle("clicked-bomb");
                 writePoint("point", `hai perso.. il tuo punteggio è : ${point}`)
+                point=0;
                 })
             }
            
@@ -145,6 +146,7 @@ buttonPlay.addEventListener("click", function() {
                     realSquare.addEventListener("click" , function(){
                     realSquare.classList.toggle("clicked-bomb");
                     writePoint("point", `hai perso.. il tuo punteggio è : ${point}`)
+                    point=0;
                     })
                 }
     
@@ -181,7 +183,7 @@ buttonPlay.addEventListener("click", function() {
                 realSquare.classList.toggle("clicked-bomb")
                 writePoint("point", `hai perso.. il tuo punteggio è : ${point}`)
                 point=0;
-                realSquare.remove.addEventListener("click");
+                
                 })
             }
             
