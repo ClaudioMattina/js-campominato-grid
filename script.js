@@ -42,7 +42,6 @@ function bombGeneration (nBombs,nCell){
     for(i = 0 ; i < nBombs ; i++){
         bombList.push(randomNumbersOnly(bombList, 1, nCell))
     }
-
     return bombList;
 }
 
@@ -144,10 +143,7 @@ buttonPlay.addEventListener("click", function() {
     
     }
     
-    else {
-
-
-        
+    else {      
             /* genero bombe 16 bombe con numeri random */
             const bombes = bombGeneration(16, 49);
             console.log(bombes);
@@ -176,11 +172,10 @@ buttonPlay.addEventListener("click", function() {
             
             /* adesso inserisco lo square nel parent che volgio (in questo caso nel grid) */
             grid.appendChild(realSquare);
+        }
     }
-
+ 
     
-    }
-
     
 })
 

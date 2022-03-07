@@ -24,10 +24,16 @@ main{
     margin-top: 50px;
 }
 
+
+
 .clearfix::after{
     clear: both;
     display: table;
     content: "";
+}
+
+#point{
+    color: white;
 }
 
 
