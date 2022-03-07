@@ -18,7 +18,7 @@ function randomNumGenerator (minValue, maxValue){
     }
 
     /* operazione per generare un numero random tra due valori indicati */
-    return (Math.floor(Math.random()) * ((maxValue + 1) - minValue) + minValue)
+    return (Math.floor(Math.random() * ((maxValue + 1) - minValue) + minValue))
 }
 
 /* funzione che genera numeri randomici unici da quelli generati.. inserendo in una blacklist quelli già generati */
@@ -27,7 +27,7 @@ function randomNumbersOnly (blackList, minN, maxN){
     let randomItem;
 
     while (!check){
-        randomItem = randomNumGenerator(minN,maxN);
+        randomItem = Math.floor(Math.random() * ((maxN + 1) - minN) + minN);
         if( !blackList.includes(randomItem)){
             check = true ;
         }
@@ -88,8 +88,9 @@ buttonPlay.addEventListener("click", function() {
             grid.appendChild(realSquare);
         }
 
-        const bombs = bombGeneration(16,100)
-        console.log(bombs)
+        const bombes = bombGeneration(16, 100);
+        console.log(bombes)
+        
     }
     
     else if(inputDifficoltà.value == "medio"){
