@@ -45,6 +45,10 @@ function bombGeneration (nBombs,nCell){
     return bombList;
 }
 
+function writePoint(nameId, stringa){
+    document.getElementById(nameId).innerHTML = stringa;
+}
+
 /* **************************************************************************************************************** */
 
 
@@ -65,7 +69,7 @@ let buttonPlay = document.getElementById("my-button");
 /* collego il contenitore dove ci sarà scritto il punteggio */
 
 
-let pointContainer = 0;
+let point = 0;
 
 
 
@@ -93,21 +97,24 @@ buttonPlay.addEventListener("click", function() {
                  /* che dice "al click aggiungi la classe clicked (classe che ho creato nel css)" */
                  realSquare.addEventListener("click" , function(){
                  realSquare.classList.toggle("clicked");
-                 pointContainer++;
+                 point++
+                 writePoint("point", `il tuo punteggio è : ${point}`)
+                 
                 })
             }
             else{
                 realSquare.addEventListener("click" , function(){
                 realSquare.classList.toggle("clicked-bomb");
+                writePoint("point", `hai perso.. il tuo punteggio è : ${point}`)
                 })
             }
            
-    
+            
             /* adesso inserisco lo square nel parent che volgio (in questo caso nel grid) */
             grid.appendChild(realSquare);
         }
 
-       console.log(pointContainer)
+       
         
     }
     
@@ -130,11 +137,14 @@ buttonPlay.addEventListener("click", function() {
                     /* che dice "al click aggiungi la classe clicked (classe che ho creato nel css)" */
                     realSquare.addEventListener("click" , function(){
                     realSquare.classList.toggle("clicked");
+                    point++
+                    writePoint("point", `il tuo punteggio è : ${point}`)
                     })
                }
                else{
                     realSquare.addEventListener("click" , function(){
                     realSquare.classList.toggle("clicked-bomb");
+                    writePoint("point", `hai perso.. il tuo punteggio è : ${point}`)
                     })
                 }
     
@@ -162,12 +172,14 @@ buttonPlay.addEventListener("click", function() {
                 /* che dice "al click aggiungi la classe clicked (classe che ho creato nel css)" */
                 realSquare.addEventListener("click" , function(){
                 realSquare.classList.toggle("clicked");
+                point++
+                writePoint("point", `il tuo punteggio è : ${point}`)
                 })
             }
             else{
                 realSquare.addEventListener("click", function(){
                 realSquare.classList.toggle("clicked-bomb")
-
+                writePoint("point", `hai perso.. il tuo punteggio è : ${point}`)
                 })
             }
             
