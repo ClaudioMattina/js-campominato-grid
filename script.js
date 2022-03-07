@@ -88,7 +88,8 @@ buttonPlay.addEventListener("click", function() {
             grid.appendChild(realSquare);
         }
 
-        
+        const bombs = bombGeneration(16,100)
+        console.log(bombs)
     }
     
     else if(inputDifficoltà.value == "medio"){
