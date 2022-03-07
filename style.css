@@ -47,8 +47,13 @@ main{
 }
 
 .box.clicked{
-    background-color: blue;
+    background-color: greenyellow;
     border-color: white;
+}
+
+.clicked-bomb{
+    background-color: red;
+    border-color: black;
 }
 
 /* ********* MEDIA ********* */
@@ -80,3 +85,5 @@ main{
     align-items: center;
     cursor: pointer;
 }
+
+

@@ -77,17 +77,27 @@ buttonPlay.addEventListener("click", function() {
         for(i = 1; i <= 100; i++){
             /* creo una varialbile che crei un elemento tramite la funzione che ho creato */
             let realSquare = createSquare();
+
+            if(!bombes.includes(i)){
+
+                 /* aggiungo funzionalità al click con l'eventlistener */
+                 /* che dice "al click aggiungi la classe clicked (classe che ho creato nel css)" */
+                 realSquare.addEventListener("click" , function(){
+                 realSquare.classList.toggle("clicked");
+                })
+            }
+            else if(bombes.includes(i)){
+                realSquare.addEventListener("click" , function(){
+                    realSquare.classList.toggle("clicked-bomb");
+            }
     
-            /* aggiungo funzionalità al click con l'eventlistener */
-            /* che dice "al click aggiungi la classe clicked (classe che ho creato nel css)" */
-            realSquare.addEventListener("click" , function(){
-            realSquare.classList.toggle("clicked");
-            })
+           
     
             /* adesso inserisco lo square nel parent che volgio (in questo caso nel grid) */
             grid.appendChild(realSquare);
         }
 
+        /* genero bombe 16 bombe con numeri random */
         const bombes = bombGeneration(16, 100);
         console.log(bombes)
         
@@ -110,6 +120,10 @@ buttonPlay.addEventListener("click", function() {
                 /* adesso inserisco lo square nel parent che volgio (in questo caso nel grid) */
                 grid.appendChild(realSquare);
     }
+
+    /* genero bombe 16 bombe con numeri random */
+    const bombes = bombGeneration(16, 81);
+    console.log(bombes)
     }
     
     else {
@@ -130,6 +144,10 @@ buttonPlay.addEventListener("click", function() {
             /* adesso inserisco lo square nel parent che volgio (in questo caso nel grid) */
             grid.appendChild(realSquare);
     }
+
+    /* genero bombe 16 bombe con numeri random */
+    const bombes = bombGeneration(16, 49);
+    console.log(bombes)
     }
 
     
