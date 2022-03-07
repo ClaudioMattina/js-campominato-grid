@@ -51,7 +51,7 @@ main{
     border-color: white;
 }
 
-.clicked-bomb{
+.box.clicked-bomb{
     background-color: red;
     border-color: black;
 }

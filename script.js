@@ -132,10 +132,15 @@ buttonPlay.addEventListener("click", function() {
                     })
                }
                else{
-                realSquare.addEventListener("click" , function(){
+                    realSquare.addEventListener("click" , function(){
                     realSquare.classList.toggle("clicked-bomb");
                     })
-               }
+                }
+
+
+
+
+                
     
                 /* adesso inserisco lo square nel parent che volgio (in questo caso nel grid) */
                 grid.appendChild(realSquare);
@@ -149,10 +154,8 @@ buttonPlay.addEventListener("click", function() {
           for(i = 1; i <= 49; i++){
             /* creo una varialbile che crei un elemento tramite la funzione che ho creato */
             let realSquare = createSquare();
-    
-           
             realSquare.classList.add("box-difficile")
-            
+
             /* aggiungo funzionalità al click con l'eventlistener */
             /* che dice "al click aggiungi la classe clicked (classe che ho creato nel css)" */
             realSquare.addEventListener("click" , function(){
