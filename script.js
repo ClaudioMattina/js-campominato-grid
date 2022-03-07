@@ -72,7 +72,11 @@ buttonPlay.addEventListener("click", function() {
 
     if(inputDifficoltà.value == "facile"){
 
+         /* genero bombe 16 bombe con numeri random */
+         const bombes = bombGeneration(16, 100);
+         console.log(bombes)
 
+         
         /* CICLO FOR CHE CREA LA SERIE DI QUADRATINI */
         for(i = 1; i <= 100; i++){
             /* creo una varialbile che crei un elemento tramite la funzione che ho creato */
@@ -86,20 +90,18 @@ buttonPlay.addEventListener("click", function() {
                  realSquare.classList.toggle("clicked");
                 })
             }
-            else if(bombes.includes(i)){
+            else{
                 realSquare.addEventListener("click" , function(){
-                    realSquare.classList.toggle("clicked-bomb");
-            }
-    
+                realSquare.classList.toggle("clicked-bomb");
+            })
+        }
            
     
             /* adesso inserisco lo square nel parent che volgio (in questo caso nel grid) */
             grid.appendChild(realSquare);
         }
 
-        /* genero bombe 16 bombe con numeri random */
-        const bombes = bombGeneration(16, 100);
-        console.log(bombes)
+       
         
     }
     
@@ -121,9 +123,7 @@ buttonPlay.addEventListener("click", function() {
                 grid.appendChild(realSquare);
     }
 
-    /* genero bombe 16 bombe con numeri random */
-    const bombes = bombGeneration(16, 81);
-    console.log(bombes)
+    
     }
     
     else {
