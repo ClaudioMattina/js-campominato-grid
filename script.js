@@ -57,14 +57,15 @@ let grid = document.getElementById("grid");
 let gridVuota = document.getElementById("grid-vuota");
 
 /* collego l'input nel js */
-let inputDifficoltà = document.getElementById("difficoltà")
+let inputDifficoltà = document.getElementById("difficoltà");
 
 /* collego il bottone play con js */
 let buttonPlay = document.getElementById("my-button");
 
+/* collego il contenitore dove ci sarà scritto il punteggio */
 
 
-
+let pointContainer = 0;
 
 
 
@@ -92,6 +93,7 @@ buttonPlay.addEventListener("click", function() {
                  /* che dice "al click aggiungi la classe clicked (classe che ho creato nel css)" */
                  realSquare.addEventListener("click" , function(){
                  realSquare.classList.toggle("clicked");
+                 pointContainer++;
                 })
             }
             else{
@@ -105,7 +107,7 @@ buttonPlay.addEventListener("click", function() {
             grid.appendChild(realSquare);
         }
 
-       
+       console.log(pointContainer)
         
     }
     
@@ -176,7 +178,7 @@ buttonPlay.addEventListener("click", function() {
     }
  
     
-    
+
 })
 
 
